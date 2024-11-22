@@ -31,3 +31,11 @@ jobs:
     steps:
       - name: Deploy to github pages
         uses: actions/deploy-pages@v4
+
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          stale-issue-message: 'Closed issue due to inactivity'
+          stale-pr-message: 'Closed PR due to inactivity'
